@@ -74,6 +74,7 @@ RUN \
 
 # RDP Check
 RUN apt-get install -y freerdp2-x11
+RUN apt-get install -y xvfb
 
 # NFS Check
 RUN apt-get install -y libnfs-dev
