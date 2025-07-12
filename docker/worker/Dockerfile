@@ -80,7 +80,7 @@ RUN apt-get install -y xvfb
 RUN apt-get install -y libnfs-dev
 RUN pip install -I "libnfs==1.0.post4"
 RUN apt update
-RUN apt install nfs-common
+RUN apt install -y nfs-common
 RUN chmod +x /app/scoring_engine/checks/bin/nfs_check
 
 # Telnet Check
