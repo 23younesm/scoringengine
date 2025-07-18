@@ -92,6 +92,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 COPY bin/worker /app/bin/worker
 COPY docker/worker/sudoers /etc/sudoers
+COPY docker/worker/resolv.conf /etc/resolv.conf
 
 USER root
 
