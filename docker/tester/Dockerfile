@@ -8,6 +8,7 @@ RUN \
 
 COPY bin /app/bin
 COPY .flake8 /app/.flake8
+COPY docker/worker/resolv.conf /etc/resolv.conf
 
 # Set permissions for volume to be mounted
 RUN \

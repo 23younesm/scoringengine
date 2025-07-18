@@ -24,6 +24,7 @@ WORKDIR /app
 
 USER root
 
+COPY docker/worker/resolv.conf /etc/resolv.conf
 RUN chown -R engine:engine /app
 
 USER engine

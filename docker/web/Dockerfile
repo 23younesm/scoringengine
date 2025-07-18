@@ -15,6 +15,7 @@ RUN \
 USER engine
 
 COPY bin/web /app/bin/web
+COPY docker/worker/resolv.conf /etc/resolv.conf
 
 COPY scoring_engine /app/scoring_engine
 RUN pip install -e .
