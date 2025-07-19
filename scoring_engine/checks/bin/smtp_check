@@ -2,39 +2,41 @@
 
 import smtplib
 import sys
-from email.message import EmailMessage
 from email.utils import formatdate
 
-def send_email(fromuser, touser, subject, body, email_server, port):
+def send_email(username, password, fromuser, touser, subject, body, email_server, port):
     try:
-        msg = EmailMessage()
-        msg['From'] = fromuser
-        msg['To'] = touser
-        msg['Subject'] = subject
-        msg['Date'] = formatdate(localtime=True)
-        msg.set_content(body)
-
+        date_hdr = formatdate(localtime=True)
+        message = (
+            f'From: {fromuser}\n'
+            f'To: {touser}\n'
+            f'Date: {date_hdr}\n'
+            f'Subject: {subject}\n\n'
+            f'{body}'
+        )
         server = smtplib.SMTP(email_server, int(port))
+        server.set_debuglevel(1)
         server.ehlo()
-        # No authentication
-        server.send_message(msg)
+        server.sendmail(fromuser, touser, message)
         server.quit()
         print('Successfully sent email')
         exit(0)
     except Exception as e:
-        print('Failed to send email, received exception: {0}'.format(e))
+        print(f'Failed to send email, received exception: {e}')
         exit(1)
 
 if __name__ == '__main__':
-    if len(sys.argv) != 7:
-        print('Error: Not enough parameters passed. Need 6 parameters.')
+    if len(sys.argv) != 9:
+        print('Error: Not enough parameters passed. Need 8 parameters.')
         exit(1)
 
     send_email(
-        fromuser=sys.argv[1],
-        touser=sys.argv[2],
-        subject=sys.argv[3],
-        body=sys.argv[4],
-        email_server=sys.argv[5],
-        port=sys.argv[6],
+        username=sys.argv[1],
+        password=sys.argv[2],
+        fromuser=sys.argv[3],
+        touser=sys.argv[4],
+        subject=sys.argv[5],
+        body=sys.argv[6],
+        email_server=sys.argv[7],
+        port=sys.argv[8],
     )
