@@ -76,77 +76,66 @@ about_content = """
 </ul>"""
 
 welcome_content = """
-<style>
-    .full-page-background {
-      background: #0e0e0e;
-      background-image: url('https://psuccso.org/wp-content/themes/ccso/assets/images/background.png');
-      background-repeat: repeat-y;
-      background-size: 100% auto;
-  }
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    text-align: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-              color: #25acb7;
-    font-size: 3em;
-    font-weight: 700;
-    word-spacing: 15px;
-    letter-spacing: 3px;
-    margin-bottom: 1em;
-    text-align: center;
-        }
-  		h2 {
-          color:white;
-  }
-
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            gap: 20px;
-          place-content: center
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1.1em;
-            color: #fff;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-<body class="full-page-background">
-    <h1>&lt;Competitive Cyber Security Organization/&gt;</h1>
-    <h2>Starter Capture-The-Flag (CTF)</h2>
-    <div class="button-container">
-      <a href="https://wiki.psuccso.org/en/introduction/ccso-sso" target="_blank">
-        <button>Create CCSO Account</button>
-      </a>
-      <a href="https://wiki.psuccso.org/en/introduction/ctfd" target="_blank">
-        <button>Getting started with CTFd</button>
-      </a>
+<div class="row">
+    <h1 class="text-center">Diamond Sponsors</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
     </div>
-    <div class="button-container">
-      <a href="https://psuccso.org" target="_blank">
-        <button>Homepage</button>
-      </a>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
     </div>
-</body>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h1 class="text-center">Platinum Sponsors</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <h1 class="text-center">Gold Sponsors</h1>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div class="card">
+            <img class='center-block' src="static/images/logo-placeholder.jpg" alt="sponsor image placeholder">
+        </div>
+    </div>
+</div>
 """
 
 logger.info("Creating the default Settings")
